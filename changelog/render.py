@@ -196,7 +196,7 @@ def _render_rec(changelog_directive, rec, section, cat, append_sec):
                 node = nodes.Text(prefix % refname, prefix % refname)
             insert_ticket.append(node)
 
-    if rec['tags']:
+    if rec['tags'] and changelog_directive.env.config.changelog_render_tags:
         tag_node = nodes.strong(
             '',
             " ".join(

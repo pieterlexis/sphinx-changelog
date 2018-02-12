@@ -355,6 +355,7 @@ def setup(app):
     app.add_config_value("changelog_render_ticket", None, 'env')
     app.add_config_value("changelog_render_pullreq", None, 'env')
     app.add_config_value("changelog_render_changeset", None, 'env')
+    app.add_config_value("changelog_render_tags", None, 'env')
     app.connect('builder-inited', add_stylesheet)
     app.connect('build-finished', copy_stylesheet)
     app.add_role('ticket', make_ticket_link)
